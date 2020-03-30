@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/db9af42d68.js"></script>
+    <title>Harry & Joanne's Wedding</title>
+  </head>
+  <body>
+<!-- Hamburger nav bar -->
+ <div class="menu">
+   <input type="checkbox" class="toggle" id="checkbox">
+   <nav class="nav">
+     <div class="list">
+       <h2>Menu</h2>
+       <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="#" target="_blank">Venue</a></li>
+         <li><a href="#">Food Menu</a></li>
+         <li><a href="#">RSVP</a></li>
+         <li><a href="#">Photos</a></li>
+         <li><a href="#">Itinerary</a></li>
+       </ul>
+     </div>
+   </nav>
+   <label for="checkbox" class="nav-toggle">
+     <div class="hamburger"><div></div></div>
+   </label>
+
+   <button class="logout-btn" type="submit" name="logout-submit">Logout</button>
+ </div>
+
+
+ <main class="main-wrapper">
+   <div class="overlay">
+     <h1 class="welcome">Welcome</h1>
+     <p class="invitation-text">You have been invited to join us on our big day. <br>Please join us on <span id="wed-date">20/11/2020</span> at <span id = "wed-time">13:00</span> <br>You will find more information in the menu at the top. <br>We can't wait to see you there.</p>
+     <p class="time">Time remaining: </p>
+     <div id="countdown-text">Loading...</div>
+
+     <p class="copyright">&copy; Made by Harry Thrall</p>
+   </div>
+ </main>
+
+ <script src="scripts/countdown.js"></script>
+</body>
+</html>
