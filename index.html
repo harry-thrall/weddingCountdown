@@ -1,49 +1,169 @@
+<?php session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/hamburger.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="style.css?version=1.3">
+    <script src="scripts/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/db9af42d68.js"></script>
-    <title>Harry & Joanne's Wedding</title>
+    <title>Harry & Joanne Wedding</title>
   </head>
   <body>
-<!-- Hamburger nav bar -->
- <div class="menu">
-   <input type="checkbox" class="toggle" id="checkbox">
-   <nav class="nav">
-     <div class="list">
-       <h2>Menu</h2>
-       <ul>
-         <li><a href="#">Home</a></li>
-         <li><a href="#">Venue</a></li>
-         <li><a href="#">Food Menu</a></li>
-         <li><a href="#">RSVP</a></li>
-         <li><a href="#">Photos</a></li>
-         <li><a href="#">Itinerary</a></li>
-       </ul>
-     </div>
-   </nav>
-   <label for="checkbox" class="nav-toggle">
-     <div class="hamburger"><div></div></div>
-   </label>
+    <header>
+      <div class="header-names">
+        <h2 class="name left-name">Harry <span>Thrall</span></h2>
+        <h3 class="name-separator">&</h3>
+        <h2 class="name right-name">Joanne <span>Hill</span></h2>
+      </div>
 
-   <button class="logout-btn" type="submit" name="logout-submit">Logout</button>
- </div>
+      <hr class="header-divider">
 
+      <input type="checkbox" class="toggle" id="checkbox">
+        <nav id="nav">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#itinerary">Itinerary</a></li>
+            <li><a href="#menu">Food Menu</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox" class="nav-toggle">
+          <div class="hamburger"><div></div></div>
+        </label>
+    </header>
 
- <main class="main-wrapper">
-   <div class="overlay">
-     <h1 class="welcome">Welcome</h1>
-     <p class="invitation-text">You have been invited to join us on our big day. <br>Please join us on <span id="wed-date">20/11/2020</span> at <span id = "wed-time">13:00</span> <br>You will find more information in the menu at the top. <br>We can't wait to see you there.</p>
-     <p class="time">Time remaining: </p>
-     <div id="countdown-text">Loading...</div>
+    <div class="hero-slideshow">
+      <div class="slide slide-1">
+        <div class="hero-text-container">
+          <h2>Harry</h2>
+          <h3 class="hero-separator">&</h3>
+          <h2>Joanne</h2>
+        </div>
+      </div>
+      <div class="slide slide-2">
+        <div class="hero-text-container">
+          <h2>20th</h2>
+          <h2>October</h2>
+          <h2>2021</h2>
+        </div>
+      </div>
+      <div class="slide slide-3">
+        <div class="hero-text-container">
+          <h2>Raithwaite Estate</h2>
+          <h2>Whitby</h2>
+          <h2>UK</h2>
+        </div>
+      </div>
+    </div>
 
-     <a href="https://www.harry-thrall.com" class="copyright">&copy; Made by Harry Thrall</a>
-   </div>
- </main>
+    <div class="countdown-container">
+        <h2>August 6th 2021, Whitby, UK</h2>
+        <p class="invite-text" id="venue">You have been invited to celebrate with us</p>
 
- <script src="scripts/countdown.js"></script>
-</body>
+        <div id="countdown-text">
+          Loading...
+        </div>
+    </div>
+
+    <div class="section-bg venue" id="itinerary">
+      <h2>Raithwaite Estate, <br> Whitby, <br> North Yorkshire, <br> YO21 3ST</h2>
+      <a href="https://www.raithwaiteestate.com" target="_blank">Visit the website <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="itinerary">
+      <h2 class="section-header"><span>Itinerary</span></h2>
+      <div class="schedule">
+        <ul>
+          <li>
+            <span class="schedule-time">13:00</span>
+            <p>Ceremony begins</p>
+          </li>
+          <li>
+            <span class="schedule-time">13:30</span>
+            <p>Drinks reception</p>
+          </li>
+          <li>
+            <span class="schedule-time">15:00</span>
+            <p>Wedding breakfast</p>
+          </li>
+          <li id="menu">
+            <span class="schedule-time">19:00</span>
+            <p>First dance & Cake cutting</p>
+          </li>
+          <li>
+            <span class="schedule-time">19:30</span>
+            <p>Party time!</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-container">
+      <div class="food-menu">
+        <h2 class="menu-header">Food menu</h2>
+        <ul class="course-list">
+          <li>
+            <h3 class="course-header">Starter</h3>
+            <p>Tomato Soup with Pesto Cream</p>
+          </li>
+          <li>
+            <h3 class="course-header">Main Course</h3>
+            <p>Slow Braised Blade of Beef, Horseradish Mash,<br> Roast Shallots and Carrots with Red Wine Jus</p>
+          </li>
+          <li>
+            <h3 class="course-header">Vegetarian Main</h3>
+            <p>Wild Mushroom and Blue Cheese Wellington,<br> Seasonal Vegetables and Tarragon Cream</p>
+          </li>
+          <li>
+            <h3 class="course-header">Dessert</h3>
+            <p>Dark Chocolate Tart, White Chocolate Mousse <br>and Chocolate Ice Cream</p>
+          </li>
+          <li id="rsvp">
+            <h3 class="course-header">Evening Buffet</h3>
+            <p>Bacon Sandwiches, Sausage Sandwiches and Potato Wedges<br>(Vegetarian alternatives available)</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-bg rsvp-container">
+      <div class="rsvp">
+        <h1>Are you <br> Attending?</h1>
+        <!-- <form class="rsvp-form" action="./includes/rsvp_inc.php" method="post"> -->
+        <form class="rsvp-form">
+          <h4>Name(s):</h4>
+          <input type="text" name="name" required>
+
+          <h4>Number attending:</h4>
+          <input type="number" name="guests" value="1" min="0" max="10" required>
+
+          <div class="custom-select">
+            <select class="rsvp-response" name="response">
+              <option value="attending" selected>Attending</option>
+              <option value="night only">Evening Only</option>
+              <option value="not attending">Not Attending</option>
+            </select>
+          </div>
+
+          <h4>Please list any dietary requirements for each guest: (optional)</h4>
+          <textarea name="dietary" rows="3" cols="30" placeholder="Harry - Vegetarian"></textarea>
+
+          <button type="submit" id="submit"></button>
+          <p id="form-message"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; Made by <a href="https://www.harry-thrall.com" target="_blank">Harry Thrall</a></p>
+    </footer>
+
+    <script src="scripts/countdown.js"></script>
+    <script src="scripts/script.js?version=1.2"></script>
+  </body>
 </html>
